@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Project Three
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//  600851475143
+		// What is the largest prime factor of the number 600851475143 ?
+		var largest = 0;
+		lookForPrime(600851475143);
+
+		function lookForPrime(big){
+			for(var j = 0; j <= big; j++){
+				if((j != 1) && (big%j == 0)){
+					if(isPrime(j)){
+						if(j > largest){
+							largest = j;
+						}
+						console.log(j);
+						lookForPrime(big / j);
+						break;
+					}
+				}
+			}
+		}
+		function isPrime(number){
+			for(var i=2; i<= Math.sqrt(number); i++){
+				if(number%i ==0){
+				return false;
+				}
+			}
+			return true;
+		}
+		console.log("this is the largest prime");
+		console.log(largest);
+
+	</script>
+</body>
+</html>
