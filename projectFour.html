@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Project Four
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var largest = 0;
+
+	for(var i = 100; i < 1000; i++){
+		for(var j = 100; j < 1000; j++){
+			if(checkPalindrome(i * j)){
+				if((i * j) > largest){
+					largest = i * j;
+				}
+			}
+		}
+	}
+	console.log(largest);
+	function checkPalindrome(number){
+		var forward = number.toString();
+		var backwards = reverse(number.toString());
+		if(forward == backwards){
+			return true;
+		}
+		return false;
+	}
+
+	function reverse(s){
+   		return s.split("").reverse().join("");
+	}
+	</script>
+</body>
+</html>
