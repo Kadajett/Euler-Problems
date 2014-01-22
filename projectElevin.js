@@ -30,13 +30,32 @@ for(var i = 0; i < splitOuter.length; i++){
 
 for(var i = 0; i < splitInner.length; i++){
 	for(var j = 0; j < splitInner[i].length; j++){
-		if(i < splitInner.length - 4){
+		
+
+
+
+
+
+		if(i < splitInner[i].length - 4){
 			for(var k = 0; k <= 4; k++){
-				if(parseInt(splitInner[i][0]) + parseInt(splitInner[i + 1][0]) + parseInt(splitInner[i + 2][0]) + parseInt(splitInner[i + 3][0]) > largest){
-					largest = (parseInt(splitInner[i][0]) + parseInt(splitInner[i + 1][0]) + parseInt(splitInner[i + 2][0]) + parseInt(splitInner[i + 3][0]));
+				if(parseInt(splitInner[i][0]) * parseInt(splitInner[i + 1][0]) * parseInt(splitInner[i + 2][0]) * parseInt(splitInner[i + 3][0]) > largest){
+					largest = (parseInt(splitInner[i][0]) * parseInt(splitInner[i + 1][0]) * parseInt(splitInner[i + 2][0]) * parseInt(splitInner[i + 3][0]));
 					console.log(largest)
 				}
 			}
 		}
+
+		for(var k = 0; k <= splitInner[i].length; k++){
+			if(k <= splitInner[i].length - 4){
+				if(parseInt(splitInner[i][k]) * parseInt(splitInner[i ][k + 1]) * parseInt(splitInner[i][k + 2]) * parseInt(splitInner[i][k + 3]) > largest){
+					largest = (parseInt(splitInner[i][k]) * parseInt(splitInner[i ][k + 1]) * parseInt(splitInner[i ][k + 2]) * parseInt(splitInner[i][k + 3]));
+					console.log(largest)
+				}
+			}
+		}
+
+		// for(var k = ){
+
+		// }
 	}
 }
